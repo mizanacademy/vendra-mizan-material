@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as material;
+
+@include material.core();
+
+$app-primary: material.define-palette(material.$purple-palette);
+$app-accent: material.define-palette(material.$teal-palette, A200);
+$app-warn: material.define-palette(material.$red-palette);
+// extra Colors
+$custom-success: material.define-palette(material.$green-palette);
+$custom-danger: material.define-palette(material.$orange-palette);
+
+$custom-theme: material.define-light-theme(
+  (
+    color: (
+      primary: $app-primary,
+      accent: $app-accent,
+      warn: $app-warn,
+    ),
+  )
+);
+
+@include material.all-component-themes($custom-theme);
+
+
+html, body { height: 100%;  }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.title-custom{
+  color: #E74C3C;
+  text-align: center;
+}
