@@ -11,6 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { FagComponent } from './fag/fag.component';
 import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
+import { FirstDialogComponent } from './dialogs/first-dialog/first-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     HomeComponent,
     ProductsComponent,
-    FagComponent
+    FagComponent,
+    FirstDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     BrowserAnimationsModule
   ],
+  entryComponents: [FirstDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
