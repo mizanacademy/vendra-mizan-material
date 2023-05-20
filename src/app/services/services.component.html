@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <mat-spinner *ngIf="!data"></mat-spinner>
+    <mat-tab-group>
+        <mat-tab label="Programmer">
+            <ul>
+                <li>Turkana</li>
+                <li>İsmayil</li>
+                <li>Ali</li>
+            </ul>
+        </mat-tab>
+        <mat-tab label="Designer">
+            <li>Turkana</li>
+            <li>Zehra</li>
+            <li>Sever</li>
+        </mat-tab>
+        <mat-tab label="Composer">
+            <li>Zehra</li>
+            <li>Sever</li>
+        </mat-tab>
+        <mat-tab label="Screenwriter">
+            <li>Muhemmed Huseyn</li>
+            <li>Qafar</li>
+        </mat-tab>
+    </mat-tab-group>
+
+    <button mat-raised-button matTooltip="Info about the action" matTooltipPosition="below"
+        aria-label="Button that displays a tooltip in various positions">
+        Action
+    </button>
+
+    <button mat-raised-button matTooltip="Info about the action" [matTooltipPosition]="position"
+        aria-label="Button that displays a tooltip in various positions">
+        Action
+    </button>
+</div>

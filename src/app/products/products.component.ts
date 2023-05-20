@@ -14,7 +14,8 @@ export class ProductsComponent {
     {name: "Zehra", title: ", Please, prepare homeworks"},
     {name: "Turkane", title: ", Perfect"},
     {name: "M.Huseyn", title: ", Please, study"},
-    {name: "Qafar", title: ", Please, don't sleep"}
+    {name: "Qafar", title: ", Please, don't sleep"},
+    {name: "Ali", title: ", Please, go ahead"}
   ];
   constructor(public dialog: MatDialog) {}
 

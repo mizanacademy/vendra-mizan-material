@@ -12,6 +12,7 @@ import { FagComponent } from './fag/fag.component';
 import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
 import { FirstDialogComponent } from './dialogs/first-dialog/first-dialog.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FirstDialogComponent } from './dialogs/first-dialog/first-dialog.compon
     HomeComponent,
     ProductsComponent,
     FagComponent,
-    FirstDialogComponent
+    FirstDialogComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
