@@ -4,12 +4,14 @@ import { HomeComponent } from './home/home.component';
 import { FagComponent } from './fag/fag.component';
 import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
+import { ExampleComponent } from './example/example.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'fag', component: FagComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'example', component: ExampleComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   // { path: '**', component: PageNotFoundComponent },
 ];

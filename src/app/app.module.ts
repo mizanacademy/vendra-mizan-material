@@ -13,6 +13,7 @@ import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
 import { FirstDialogComponent } from './dialogs/first-dialog/first-dialog.component';
 import { ServicesComponent } from './services/services.component';
+import { ExampleComponent } from './example/example.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ServicesComponent } from './services/services.component';
     ProductsComponent,
     FagComponent,
     FirstDialogComponent,
-    ServicesComponent
+    ServicesComponent,
+    ExampleComponent
   ],
   imports: [
     BrowserModule,
