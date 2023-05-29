@@ -14,6 +14,8 @@ import { RouterModule } from '@angular/router';
 import { FirstDialogComponent } from './dialogs/first-dialog/first-dialog.component';
 import { ServicesComponent } from './services/services.component';
 import { ExampleComponent } from './example/example.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,16 @@ import { ExampleComponent } from './example/example.component';
     FagComponent,
     FirstDialogComponent,
     ServicesComponent,
-    ExampleComponent
+    ExampleComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule
   ],
   entryComponents: [FirstDialogComponent],
