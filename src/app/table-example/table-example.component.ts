@@ -3,6 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Student } from 'src/models/student';
+import { UsaData } from 'src/models/usa-data';
+import { ApiService } from 'src/services/api-service';
 
 @Component({
   selector: 'app-table-example',
@@ -11,6 +13,9 @@ import { Student } from 'src/models/student';
 })
 export class TableExampleComponent {
 
+  constructor(public service: ApiService) {
+    this.getData();
+  }
   student_arr: Student[] = [
     { name: 'Serxan', surname: 'Hacibeyov', age: 22 },
     { name: 'Shixismayil', surname: 'Agayev', age: 21 },
@@ -21,9 +26,13 @@ export class TableExampleComponent {
     { name: 'Qafar', surname: 'Humbetov', age: 17 }
   ];
 
-  displayedColumns = ['name', 'surname', 'age'];
-  dataSource = new MatTableDataSource<Student>(this.student_arr);
+  usa_arr: UsaData[] | undefined;
 
+
+  // displayedColumns = ['name', 'surname', 'age'];
+  displayedColumns = ['nation', 'year', 'population'];
+
+  dataSource = new MatTableDataSource<any>();
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
   @ViewChild(MatSort) sort: MatSort | undefined;
 
@@ -36,6 +45,25 @@ export class TableExampleComponent {
       this.dataSource.sort = this.sort;
 
   }
+
+  getData() {
+    // this.showSpinner=true;
+    this.service.getData().subscribe(
+      res => {
+        console.log(res);
+        this.dataSource = new MatTableDataSource<any>(res.data);
+        if (this.paginator)
+          this.dataSource.paginator = this.paginator;
+        if (this.sort)
+          this.dataSource.sort = this.sort;
+
+        //  this.showSpinner=false;
+      },
+      err => {
+        console.log(err);
+      });
+  }
+
 }
 
 

@@ -17,6 +17,8 @@ import { ExampleComponent } from './example/example.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableExampleComponent } from './table-example/table-example.component';
+import { ApiService } from 'src/services/api-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,10 +41,11 @@ import { TableExampleComponent } from './table-example/table-example.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     BrowserAnimationsModule
   ],
   entryComponents: [FirstDialogComponent],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
