@@ -8,13 +8,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactUsComponent {
   contactForm: FormGroup;
-
+  trafficLight = "purple";
+  testVal:string = "test";
+  yellowColor = "yellow";
   constructor(public formBuilder: FormBuilder){
     this.contactForm = this.formBuilder.group({
       name: ["", Validators.required],
       title: ["", Validators.required],
       message: ["", Validators.required]     
     });
+
+
   }
 
   sendData(){

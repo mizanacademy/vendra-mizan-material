@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Table Example</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="example-container mat-elevation-z8">
+                <mat-table #table [dataSource]="dataSource" matSort>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Surname Column -->
+                    <ng-container matColumnDef="surname">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Surname </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.surname}} </mat-cell>
+                    </ng-container>
+
+                    <!-- Age Column -->
+                    <ng-container matColumnDef="age">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Age </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.age}} </mat-cell>
+                    </ng-container>
+
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+
+                <mat-paginator #paginator [pageSize]="3" [pageSizeOptions]="[3, 6, 9]">
+                </mat-paginator>
+            </div>
+        </div>
+    </div>
+</div>

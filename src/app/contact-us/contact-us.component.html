@@ -20,4 +20,15 @@
             </form>
      
     </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div [ngSwitch]="trafficLight" class="trClass">
+                <ng-template [ngSwitchCase]="yellowColor">It is yellow</ng-template>
+                <ng-template ngSwitchCase="red">It is red</ng-template>
+                <ng-template ngSwitchDefault>It is green</ng-template>
+                
+            </div>
+        </div>
+    </div>
 </div>
